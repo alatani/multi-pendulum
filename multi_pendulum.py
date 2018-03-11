@@ -1,6 +1,5 @@
 #coding: utf-8
 #参考： http://www.moorepants.info/blog/npendulum.html
-
 from sympy import symbols
 from sympy.physics.mechanics import *
 from sympy import Dummy, lambdify
@@ -61,12 +60,10 @@ def createKane():
 
     mprint(frstar)
 
-
-
     #SIMULATE
     arm_length = 1. / n                          # The maximum length of the pendulum is 1 meter
     bob_mass = 0.03 / n                          # The maximum mass of the bobs is 10 grams
-    parameters = [g, m[0]]                       # Parameter definitions starting with gravity and the first bob
+    k = [g, m[0]]                       # Parameter definitions starting with gravity and the first bob
     cart_mass = 0.01/n
     parameter_vals = [9.81, cart_mass]            # Numerical values for the first two
     for i in range(n):                           # Then each mass and length
@@ -177,9 +174,10 @@ def animate_pendulum(t, states, length, filename=None):
     plt.show()
     # save the animation if a filename is given
     #if filename is not None:
-    #    anim.save(filename, fps=30, codec='libx264')
 
-
-createKane()
+print("hello world 1")
+if __name__ == "__main__":
+    print("hello world 2")
+    createKane()
 
 

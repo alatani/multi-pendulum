@@ -99,5 +99,8 @@ def createEq():
 
 if __name__ == "__main__":
     #from sympy import *
-    createEq()
+    print("test")
+    #  createEq()
     pass
+
+
